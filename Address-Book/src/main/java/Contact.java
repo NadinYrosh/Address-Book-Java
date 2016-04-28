@@ -36,6 +36,10 @@ public class Contact {
     return mNumbers;
   }
 
+  public static ArrayList<Contact> getAll(){
+    return mInstances;
+  }
+
   public static void clear() {
     mInstances.clear();
   }

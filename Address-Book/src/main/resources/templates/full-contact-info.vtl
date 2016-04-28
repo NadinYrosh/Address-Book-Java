@@ -1,0 +1,13 @@
+full-contact-info.vtl
+
+<h1>$contact.getName()</h1>
+
+<p>$contact.getBirthMonth()</p>
+<ul>
+  #foreach($number in $contact.getNumbers())
+    <li>$number.getFullPhoneNumber()</li>
+    <li>$number.getPhoneType()</li>
+#end
+</ul>
+
+<a href="/">Go to main page.</a>

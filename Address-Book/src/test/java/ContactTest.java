@@ -63,6 +63,14 @@ public class ContactTest {
     assertEquals(Contact.find(testContact2.getId()), testContact2);
   }
 
+  @Test
+  public void id_getAllContactInstances() {
+    Contact testContact1 = new Contact("Harry", "Potter");
+    Contact testContact2 = new Contact("Hermione", "Granger");
+    assertTrue(Contact.getAll().contains(testContact1));
+    assertTrue(Contact.getAll().contains(testContact2));
+  }
+
   // public void category_instantiatesCorrectly_true() {
   //   Category testCategory = new Category("Home");
   //   assertEquals(true, testCategory instanceof Category);

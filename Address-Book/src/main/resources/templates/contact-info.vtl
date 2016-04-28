@@ -1,0 +1,24 @@
+contact-info.vtl
+
+<h1>$contact.getName()</h1>
+
+<form action="/contacts/$contact.getId()" method="post">
+  <div class="form-group">
+    <label for="areaCode">Enter The Area Code</label>
+    <input id="areaCode" name="areaCode" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber">Enter a Phone Number</label>
+    <input id="phoneNumber" name="phoneNumber" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="type">Type of Number</label>
+    <input id="type" name="type" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="birthMonth">Birth Month</label>
+    <input id="birthMonth" name="birthMonth" type="text" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-success">Add Info</button>
+</form>
