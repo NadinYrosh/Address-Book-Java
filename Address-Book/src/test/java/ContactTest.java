@@ -1,8 +1,16 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.ArrayList;
+
+
 
 
 public class ContactTest {
+  @After
+  public void tearDown() {
+    // Contact.clear();
+  }
+
   @Test
   public void checkContackCreation() {
     Contact testContact = new Contact("Harry", "Potter");
@@ -32,6 +40,14 @@ public class ContactTest {
   public void get_PhoneNumberType_Home(){
     Phone testPhone = new Phone("503", "555-1234", "Home");
     assertEquals("Home", testPhone.getPhoneType());
+  }
+
+  @Test
+  public void add_addPhoneNumberToContact_true(){
+    Contact testContact = new Contact("Harry", "Potter");
+    Phone testPhone = new Phone("503", "555-1234", "Home");
+    testContact.addPhone(testPhone);
+    assertTrue(testContact.getNumbers().contains(testPhone));
   }
 
   // @Test

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Phone {
   private String mAreaCode;
   private String mType;

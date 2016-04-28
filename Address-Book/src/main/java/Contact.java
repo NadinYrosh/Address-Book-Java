@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Contact {
+  private ArrayList<Phone> mNumbers = new ArrayList<Phone>();
   private String mFirstName;
   private String mLastName;
   private int mBirthMonth;
@@ -6,6 +9,7 @@ public class Contact {
   public Contact (String firstname, String lastname) {
     mFirstName = firstname;
     mLastName = lastname;
+    mNumbers = new ArrayList<Phone>();
   }
 
   public String getName() {
@@ -20,5 +24,11 @@ public class Contact {
     return mBirthMonth;
   }
 
-  // public
+  public void addPhone(Phone phone) {
+    mNumbers.add(phone);
+  }
+
+  public ArrayList<Phone> getNumbers() {
+    return mNumbers;
+  }
 }
