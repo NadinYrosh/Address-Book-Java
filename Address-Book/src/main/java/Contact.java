@@ -43,4 +43,12 @@ public class Contact {
   public int getId() {
     return mId;
   }
+
+  public static Contact find(int id){
+    try {
+      return mInstances.get(id - 1);
+    } catch (IndexOutOfBoundsException e){
+      return null;
+    }
+  }
 }
