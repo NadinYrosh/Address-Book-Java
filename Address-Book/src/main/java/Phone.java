@@ -12,4 +12,8 @@ public class Phone {
   public String getFullPhoneNumber() {
     return mAreaCode + "-" + mPhoneNumber;
   }
+
+  public String getPhoneType() {
+    return mType;
+  }
 }

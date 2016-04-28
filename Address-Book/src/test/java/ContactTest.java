@@ -28,6 +28,12 @@ public class ContactTest {
     assertEquals("503-555-1234", testPhone.getFullPhoneNumber());
   }
 
+  @Test
+  public void get_PhoneNumberType_Home(){
+    Phone testPhone = new Phone("503", "555-1234", "Home");
+    assertEquals("Home", testPhone.getPhoneType());
+  }
+
   // @Test
   // public void
 
