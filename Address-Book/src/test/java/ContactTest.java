@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class ContactTest {
   @After
   public void tearDown() {
-    // Contact.clear();
+    Contact.clear();
   }
 
   @Test
@@ -50,8 +50,11 @@ public class ContactTest {
     assertTrue(testContact.getNumbers().contains(testPhone));
   }
 
-  // @Test
-  // public void
+  @Test
+  public void id_getIDfromContact_1 () {
+    Contact testContact = new Contact("Harry", "Potter");
+    assertEquals(1, testContact.getId());
+  }
 
   // public void category_instantiatesCorrectly_true() {
   //   Category testCategory = new Category("Home");

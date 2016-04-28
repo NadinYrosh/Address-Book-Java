@@ -1,15 +1,19 @@
 import java.util.ArrayList;
 
 public class Contact {
-  private ArrayList<Phone> mNumbers = new ArrayList<Phone>();
+  private static ArrayList<Contact> mInstances = new ArrayList<Contact>();
+  private ArrayList<Phone> mNumbers;
   private String mFirstName;
   private String mLastName;
   private int mBirthMonth;
+  private int mId;
 
   public Contact (String firstname, String lastname) {
     mFirstName = firstname;
     mLastName = lastname;
     mNumbers = new ArrayList<Phone>();
+    mInstances.add(this);
+    mId = mInstances.size();
   }
 
   public String getName() {
@@ -30,5 +34,13 @@ public class Contact {
 
   public ArrayList<Phone> getNumbers() {
     return mNumbers;
+  }
+
+  public static void clear() {
+    mInstances.clear();
+  }
+
+  public int getId() {
+    return mId;
   }
 }
